@@ -6,6 +6,7 @@ import Heading from '../../components/Heading';
 import Title from '../../components/Title';
 import CategoryList from '../../components/CategoryList';
 import StreamList from '../../components/StreamList';
+import ChannelList from '../../components/ChannelList';
 
 import { Container, Wrapper, Main } from './styles';
 
@@ -49,7 +50,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'C3',
-        render: () => <View />,
+        render: () => <StreamList />,
       },
       {
         key: 'OFFLINE_CHANNELS',
@@ -58,7 +59,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'C4',
-        render: () => <View />,
+        render: () => <ChannelList />,
       },
     ];
 
