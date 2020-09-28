@@ -40,6 +40,10 @@ $ yarn start
 ```
 Após a execução, leia o QRCode usando o aplicativo Expo em seu smartphone
 
+## :white_check_mark: Resultado
+
+![](https://github.com/AfonsoMachado/dropbox-clone/blob/master/result.jpg)
+
 ---
 
 <p align="center">Feito com 💜 por <strong><a href="https://www.linkedin.com/in/AfonsoMachado/">Afonso Machado</a> 🥰 </strong> </p>
