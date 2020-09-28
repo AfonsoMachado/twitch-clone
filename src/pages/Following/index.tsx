@@ -4,6 +4,7 @@ import { FlatList, Text, View } from 'react-native';
 import Header from '../../components/Header';
 import Heading from '../../components/Heading';
 import Title from '../../components/Title';
+import CategoryList from '../../components/CategoryList';
 
 import { Container, Wrapper, Main } from './styles';
 
@@ -29,7 +30,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'C1',
-        render: () => <View />,
+        render: () => <CategoryList />,
       },
       {
         key: 'LIVE_CHANNELS',
