@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 import Header from '../../components/Header';
 
 import { Container, Wrapper, Main } from './styles';
@@ -12,7 +12,8 @@ interface Item {
 
 const Following: React.FC = () => {
   // Cálculo assim que a pagina inicia (React Hooks / comportamento do componente)
-  React.useMemo(() => {
+  // Desestruturando do retorno desta função
+  const { data, indices } = React.useMemo(() => {
     const items: Item[] = [
       {
         key: 'PAGE_HEADING',
@@ -55,6 +56,17 @@ const Following: React.FC = () => {
         render: () => <View />,
       },
     ];
+
+    // Array que contem apenas os indices dos elementos que sao titulos
+    const indices: number[] = [];
+
+    // Se um item for um titulo, insere o index do mesmo dentro do arrat de index
+    items.forEach((item, index) => item.isTitle && indices.push(index));
+
+    return {
+      data: items,
+      indices,
+    };
   }, []);
 
   return (
@@ -62,7 +74,20 @@ const Following: React.FC = () => {
       <Container>
         <Header />
 
-        <Main />
+        <Main>
+          {/* Lista dos itens criados */}
+          <FlatList<Item>
+            data={data}
+            // Recebe o item e renderiza o mesmo na tela, utilizando o metodo render ja definido na função useMemo
+            renderItem={({ item }) => item.render()}
+            keyExtractor={(item) => item.key}
+            // Indice dos elementos que farão o efeito sticky
+            stickyHeaderIndices={indices}
+            // Refresh Efrect
+            onRefresh={() => {}}
+            refreshing={false}
+          />
+        </Main>
       </Container>
     </Wrapper>
   );
