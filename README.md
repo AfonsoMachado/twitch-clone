@@ -42,7 +42,7 @@ Após a execução, leia o QRCode usando o aplicativo Expo em seu smartphone
 
 ## :white_check_mark: Resultado
 
-![](https://github.com/AfonsoMachado/dropbox-clone/blob/master/result.jpg)
+![](https://github.com/AfonsoMachado/twitch-clone/blob/master/result.jpg)
 
 ---
 
