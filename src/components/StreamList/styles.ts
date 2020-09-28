@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import colors from '../../styles/colors';
 
 export const List = styled.View`
   padding: 8px 0 24px;
@@ -12,27 +13,62 @@ export const StreamContainer = styled.TouchableOpacity`
   margin-right: 24px;
 `;
 
-export const StreamColumn = styled.View``;
+export const StreamColumn = styled.View`
+  margin-left: 11px;
+  flex: 1;
+`;
 
 export const StreamThumbnail = styled.Image`
   width: 119px;
   height: 66px;
 `;
 
-export const StreamRow = styled.View``;
+export const StreamRow = styled.View`
+  height: 66px;
+  justify-content: space-between;
+`;
 
-export const StreamHeader = styled.View``;
+export const StreamHeader = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
 
-export const StreamAvatar = styled.View``;
+export const StreamAvatar = styled.View`
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: ${colors.tag};
+`;
 
-export const StreamUsername = styled.Text``;
+export const StreamUsername = styled.Text`
+  color: ${colors.black};
+  margin-left: 5px;
+  font-family: roboto_700;
+`;
 
-export const StreamDescription = styled.Text``;
+export const StreamDescription = styled.Text`
+  color: ${colors.black};
+`;
 
-export const StreamCategory = styled.Text``;
+export const StreamCategory = styled.Text`
+  color: ${colors.gray};
+  font-family: roboto_500;
+`;
 
-export const TagRow = styled.View``;
+export const TagRow = styled.View`
+  margin-top: 8px;
+  flex-direction: row;
+`;
 
-export const TagView = styled.View``;
+export const TagView = styled.View`
+  background: ${colors.tag};
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-right: 5px;
+`;
 
-export const TagText = styled.Text``;
+export const TagText = styled.Text`
+  color: ${colors.black};
+  font-family: roboto_500;
+  font-size: 13px;
+`;
