@@ -3,6 +3,7 @@ import { FlatList, Text, View } from 'react-native';
 
 import Header from '../../components/Header';
 import Heading from '../../components/Heading';
+import Title from '../../components/Title';
 
 import { Container, Wrapper, Main } from './styles';
 
@@ -23,7 +24,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'FOLLOWED_CATEGORIES',
-        render: () => <View />,
+        render: () => <Title>Followead Categories</Title>,
         isTitle: true,
       },
       {
@@ -32,7 +33,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'LIVE_CHANNELS',
-        render: () => <View />,
+        render: () => <Title>Live Channels</Title>,
         isTitle: true,
       },
       {
@@ -41,7 +42,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'CONTINUE_WATCHING',
-        render: () => <View />,
+        render: () => <Title>Continue Watching</Title>,
         isTitle: true,
       },
       {
@@ -50,7 +51,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'OFFLINE_CHANNELS',
-        render: () => <View />,
+        render: () => <Title>Offline Channels</Title>,
         isTitle: true,
       },
       {
